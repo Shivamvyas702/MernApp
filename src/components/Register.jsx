@@ -46,15 +46,16 @@ const navigate = useNavigate();
     <div className="flex justify-center items-center h-screen bg-slate-200">   
       <div className="bg-white shadow-md p-8 mb-2 rounded-md w-full sm:w-96">       
       {successMessage && <p className="text-green-500 mb-4 text-center font-bold">{successMessage}</p>}
-        <h1 className="text-2xl mb-4 text-center font-bold bg-slate-600 text-white rounded-md p-4">
+        <h1 className="text-2xl mb-4 text-center font-bold bg-indigo-500 text-white rounded-md p-4">
           Registration Form
         </h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}     
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
             <input
-              className="shadow appearance-none border bg-orange-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full  py-2 
+              px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -65,7 +66,8 @@ const navigate = useNavigate();
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
             <input
-              className="shadow appearance-none border rounded w-full bg-orange-100 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full  py-2 
+              px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -76,7 +78,7 @@ const navigate = useNavigate();
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
             <input
-              className="shadow appearance-none bg-orange-100 border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none  border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

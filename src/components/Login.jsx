@@ -40,7 +40,7 @@ const navigate=useNavigate()
   </div>
     <div className="flex justify-center items-center h-screen bg-slate-200">
       <div className="bg-white shadow-md p-8 mb-2 rounded-md w-full sm:w-96">
-        <h1 className="text-2xl mb-4 text-center font-bold bg-slate-600 text-white rounded-md p-4">
+        <h1 className="text-2xl mb-4 text-center font-bold bg-indigo-500 text-white rounded-md p-4">
           Login Form
         </h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
