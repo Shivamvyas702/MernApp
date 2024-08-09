@@ -17,7 +17,7 @@ function Home() {
     dueDate: '',
     priority: '',
   });
-  const [username, setUsername] = useState('');
+  const [name, setname] = useState('');
   const [email,setemail] = useState('')
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
@@ -144,7 +144,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem('username');
+    localStorage.removeItem('name');
     navigate('/login');
   };
 

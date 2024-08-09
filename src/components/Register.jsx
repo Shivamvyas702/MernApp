@@ -3,19 +3,20 @@ import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom'; // Assuming you're using React Router for navigation
 
 const Register = ({ history }) => {
-  const [username, setUsername] = useState('');
+  const [name, setname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  console.log(name,'fgdfg')
 const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/users/register', { username, email, password });
+      const response = await axios.post('http://localhost:5000/users/register', { name, email, password });
       localStorage.setItem('token', response.data.token);
       setSuccessMessage('Registration successful!'); // Set success message
-      setUsername(''); // Clear input fields
+      setname(''); // Clear input fields
       setEmail('');
       setPassword('');
       setTimeout(() => {
@@ -52,14 +53,14 @@ const navigate = useNavigate();
         {error && <p className="text-red-500 mb-4">{error}</p>}     
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">name</label>
             <input
               className="shadow appearance-none border rounded w-full  py-2 
               px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Username..."
+              value={name}
+              onChange={(e) => setname(e.target.value)}
+              placeholder="name..."
               required
             />
           </div>

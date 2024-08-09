@@ -36,7 +36,7 @@ function AddTaskForm() {
       All Task
     </button>
   </Link>
-</div>      <form onSubmit={handleSubmit} className="bg-purple-200 mb-12 mt-2 my-12 mx-16  p-8 rounded shadow-md">
+</div>      <form onSubmit={handleSubmit} className="bg-slate-200 mb-12 mt-2 my-12 mx-16  p-8 rounded-md shadow-md">
   <div className='p-2 m-2 text-lg font-bold'>
     Create Task 
   </div>
@@ -99,16 +99,17 @@ function AddTaskForm() {
         </div>
         <div className="flex justify-end">
 
-       <Link to="/">
+       <Link to="/dashboard">
         <button
         type='button'
-         className='boeder-indigo-500 border mr-2 text-indigo-500 font-bold py-2 px-4'>
+         className='border-indigo-500 hover:bg-slate-700 hover:text-white  rounded-md border mr-2 text-indigo-500
+          font-bold py-2 px-4' >
          Close
          </button>
          </Link>
           <button
             type="submit"
-            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md"
           >
             Add Task
           </button>
